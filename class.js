@@ -17,8 +17,6 @@ function Cell(x, y) {
 function Snake(cells, direction) {
     this.cells = cells;
 
-    this.direction = direction;
-
     this.doStep = function () {
         this.cells.forEach((element, index) => {
             if (index < this.cells.length - 1) {
@@ -35,6 +33,9 @@ function Snake(cells, direction) {
             this.cells[this.cells.length - 1].add(this.direction);
         }
     }
+
+    this.direction = new Cell(direction.x, direction.y);
+    this.previousDirection = new Cell(direction.x, direction.y);
 
     this.getLastCell = function () {
         return this.cells[this.cells.length - 1];

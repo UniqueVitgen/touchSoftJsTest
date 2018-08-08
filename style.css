@@ -60,6 +60,10 @@
             background: blue;
         }
 
+        .last-snake-ceil {
+            background: rgb(0, 0, 170);
+        }
+
         .object-cell {
             background: yellowgreen;
         }
